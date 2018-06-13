@@ -5,6 +5,7 @@ function(){
         sections.forEach(addFooter);
     }
     function addFooter(currentSelector){
+        if (currentSelector.querySelectorAll('section').length > 0) return;
         var numOfFooters = currentSelector.querySelectorAll('.foot').length
         var spacer = document.createElement('div');
         spacer.setAttribute('class', 'stretch');
